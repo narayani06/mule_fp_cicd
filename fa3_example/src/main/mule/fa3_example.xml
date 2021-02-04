@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="sampleFlow" doc:id="30c62378-6a61-4184-b960-f1042c89064e" >
 		<http:listener doc:name="Listener" doc:id="84f1bca6-7659-4d9b-874c-5413ded0dda1" config-ref="HTTP_Listener_config" path="/employees"/>
-		<set-payload value="this gives you details of all employess" doc:name="Set Payload" doc:id="bbf33a59-651b-45be-a94d-7ea5d101673d" />
-		<logger level="INFO" doc:name="Logger" doc:id="504a18e6-21be-4c91-a49c-c233f9e1bb0a" message="#[payload]" />
+		<set-payload value="hi" doc:name="Set Payload" doc:id="bbf33a59-651b-45be-a94d-7ea5d101673d" />
+		<logger level="INFO" doc:name="Logger" doc:id="082503a6-531c-4a11-8f2e-2b0f99be5b56" message="#[payload]"/>
 	</flow>
 </mule>
