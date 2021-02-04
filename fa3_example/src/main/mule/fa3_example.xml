@@ -10,10 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="sampleFlow" doc:id="30c62378-6a61-4184-b960-f1042c89064e" >
 		<http:listener doc:name="Listener" doc:id="84f1bca6-7659-4d9b-874c-5413ded0dda1" config-ref="HTTP_Listener_config" path="/employees"/>
 		<set-payload value="this gives you details of all employess" doc:name="Set Payload" doc:id="bbf33a59-651b-45be-a94d-7ea5d101673d" />
-	</flow>
-	<flow name="fa3_exampleFlow1" doc:id="62c3d84e-3aa1-49a8-b00c-94ead00bec45" >
-		<http:listener doc:name="Listener" doc:id="8fc5347f-22e8-4ebd-9dbb-7d1718e0c02e" config-ref="HTTP_Listener_config" path="/trial"/>
-		<flow-ref doc:name="Flow Reference" doc:id="47e2233d-5cd6-4fb4-b723-0ec4e558079d" name="sampleFlow"/>
-		<logger level="INFO" doc:name="Logger" doc:id="3a27cdcd-5510-4e87-8298-b37bf5a985b3" message="trying to add few details"/>
+		<logger level="INFO" doc:name="Logger" doc:id="504a18e6-21be-4c91-a49c-c233f9e1bb0a" message="#[payload]" />
 	</flow>
 </mule>
